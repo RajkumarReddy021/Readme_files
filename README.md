@@ -16,7 +16,7 @@ touch your-repo/Jenkinsfile
 
 ### 1. Packer Configuration
 
-**File: `packer/airflow-packer-template.json`**
+**File: `packer/airflow-packer-template.json`**  
 
 ```json
 {
