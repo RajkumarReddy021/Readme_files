@@ -9,7 +9,8 @@ touch your-repo/packer/airflow-packer-template.json
 touch your-repo/ansible/setup-airflow.yml
 touch your-repo/ansible/airflow.cfg
 touch your-repo/cloudformation/airflow-infrastructure.yaml
-touch your-repo/Jenkinsfile  
+touch your-repo/Jenkinsfile
+```
 
 
 ## Code Details
