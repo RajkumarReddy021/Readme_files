@@ -40,7 +40,7 @@ touch your-repo/Jenkinsfile
   ]
 }
 ```
-###ansible/setup-airflow.yml
+### ansible/setup-airflow.yml
 ```yaml file
 
 ---
@@ -81,7 +81,9 @@ touch your-repo/Jenkinsfile
       systemd:
         name: airflow-scheduler
         state: started
-        enabled: yes
+        enabled: yes   
+
+### ansible/airflow.cfg
 [core]
 dags_folder = /usr/local/airflow/dags
 plugins_folder = /usr/local/airflow/plugins
