@@ -81,9 +81,10 @@ touch your-repo/Jenkinsfile
       systemd:
         name: airflow-scheduler
         state: started
-        enabled: yes   
-
+        enabled: yes
+````
 ### ansible/airflow.cfg
+```  yaml
 [core]
 dags_folder = /usr/local/airflow/dags
 plugins_folder = /usr/local/airflow/plugins
@@ -114,7 +115,9 @@ Resources:
       Tags:
         - Key: Name
           Value: "AirflowInstance"
-
+```
+### cloudformation/airflow-infrastructure.yaml
+```
   AirflowSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -124,6 +127,9 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
+```
+### jenkins
+''' jenkins
 pipeline {
     agent any
 
@@ -167,5 +173,6 @@ pipeline {
         }
     }
 }
+```
 
 
